@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Wed Feb 15 11:58:56 2017
+# Process ID: 14804
+# Current directory: C:/Users/Shubhanshu Agarwal/Full_adder
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5396 C:\Users\Shubhanshu Agarwal\Full_adder\Full_adder.xpr
+# Log file: C:/Users/Shubhanshu Agarwal/Full_adder/vivado.log
+# Journal file: C:/Users/Shubhanshu Agarwal/Full_adder\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Shubhanshu Agarwal/Full_adder/Full_adder.xpr}
+synth_design -rtl -name rtl_1
