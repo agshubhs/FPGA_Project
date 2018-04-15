@@ -1,0 +1,310 @@
+
+*** Running vivado
+    with args -log sequence.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sequence.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source sequence.tcl -notrace
+Command: synth_design -top sequence -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11124 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 297.313 ; gain = 87.238
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'sequence' [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:21]
+	Parameter s0 bound to: 3'b000 
+	Parameter s1 bound to: 3'b001 
+	Parameter s2 bound to: 3'b010 
+	Parameter s3 bound to: 3'b011 
+	Parameter s4 bound to: 3'b100 
+	Parameter s5 bound to: 3'b101 
+	Parameter s6 bound to: 3'b110 
+	Parameter s7 bound to: 3'b111 
+WARNING: [Synth 8-567] referenced signal 'counter' should be on the sensitivity list [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:52]
+INFO: [Synth 8-256] done synthesizing module 'sequence' (1#1) [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:21]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 334.492 ; gain = 124.418
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:32 . Memory (MB): peak = 334.492 ; gain = 124.418
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/constrs_1/new/seq_cons.xdc]
+Finished Parsing XDC File [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/constrs_1/new/seq_cons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/constrs_1/new/seq_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/sequence_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/sequence_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 624.414 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:53 . Memory (MB): peak = 624.414 ; gain = 414.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:53 . Memory (MB): peak = 624.414 ; gain = 414.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:53 . Memory (MB): peak = 624.414 ; gain = 414.340
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'r_reg' [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:57]
+WARNING: [Synth 8-327] inferring latch for variable 'w_reg' [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:58]
+WARNING: [Synth 8-327] inferring latch for variable 'n_state_reg' [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:56]
+WARNING: [Synth 8-327] inferring latch for variable 'counter_reg' [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:64]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:54 . Memory (MB): peak = 624.414 ; gain = 414.340
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 7     
+	   8 Input      3 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 5     
+	   9 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module sequence 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 7     
+	   8 Input      3 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 5     
+	   9 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (r_reg) is unused and will be removed from module sequence.
+WARNING: [Synth 8-3332] Sequential element (r_reg__0) is unused and will be removed from module sequence.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'r_reg__0/Q' [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:43]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:43]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:43]
+WARNING: [Synth 8-3332] Sequential element (w_reg) is unused and will be removed from module sequence.
+WARNING: [Synth 8-3332] Sequential element (w_reg__0) is unused and will be removed from module sequence.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'w_reg__0/Q' [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:44]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:44]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:44]
+WARNING: [Synth 8-3332] Sequential element (n_state_reg[2]) is unused and will be removed from module sequence.
+WARNING: [Synth 8-3332] Sequential element (n_state_reg[1]) is unused and will be removed from module sequence.
+WARNING: [Synth 8-3332] Sequential element (n_state_reg[0]) is unused and will be removed from module sequence.
+WARNING: [Synth 8-3332] Sequential element (counter_reg[2]) is unused and will be removed from module sequence.
+WARNING: [Synth 8-3332] Sequential element (counter_reg[1]) is unused and will be removed from module sequence.
+WARNING: [Synth 8-3332] Sequential element (counter_reg[0]) is unused and will be removed from module sequence.
+WARNING: [Synth 8-3332] Sequential element (counter_reg[2]__0) is unused and will be removed from module sequence.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'counter_reg[2]__0/Q' [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:45]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:45]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:45]
+WARNING: [Synth 8-3332] Sequential element (counter_reg[1]__0) is unused and will be removed from module sequence.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'counter_reg[1]__0/Q' [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:45]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:45]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:45]
+WARNING: [Synth 8-3332] Sequential element (counter_reg[0]__0) is unused and will be removed from module sequence.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'counter_reg[0]__0/Q' [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:45]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:45]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.srcs/sources_1/new/sequence.v:45]
+WARNING: [Synth 8-3332] Sequential element (p_state_reg[2]) is unused and will be removed from module sequence.
+WARNING: [Synth 8-3332] Sequential element (p_state_reg[1]) is unused and will be removed from module sequence.
+WARNING: [Synth 8-3332] Sequential element (p_state_reg[0]) is unused and will be removed from module sequence.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:54 . Memory (MB): peak = 624.414 ; gain = 414.340
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:01:20 . Memory (MB): peak = 624.414 ; gain = 414.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:01:20 . Memory (MB): peak = 624.414 ; gain = 414.340
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:01:20 . Memory (MB): peak = 624.414 ; gain = 414.340
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:01:22 . Memory (MB): peak = 624.414 ; gain = 414.340
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:01:22 . Memory (MB): peak = 624.414 ; gain = 414.340
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:01:22 . Memory (MB): peak = 624.414 ; gain = 414.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:01:22 . Memory (MB): peak = 624.414 ; gain = 414.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:01:22 . Memory (MB): peak = 624.414 ; gain = 414.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:01:22 . Memory (MB): peak = 624.414 ; gain = 414.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |OBUF |     2|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     2|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:01:22 . Memory (MB): peak = 624.414 ; gain = 414.340
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 15 critical warnings and 20 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:50 . Memory (MB): peak = 624.414 ; gain = 112.289
+Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:01:22 . Memory (MB): peak = 624.414 ; gain = 414.340
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+14 Infos, 21 Warnings, 15 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:01:06 . Memory (MB): peak = 624.414 ; gain = 408.238
+INFO: [Common 17-1381] The checkpoint 'E:/B. Tech II Year/II Semester/EC_252/FPGA week 1/FPGA_Projects/Sequence/Sequence.runs/synth_1/sequence.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 624.414 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 15 19:18:26 2018...
